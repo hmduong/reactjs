@@ -1,5 +1,3 @@
-//https://62dc08084438813a261000af.mockapi.io/demoapi/users
-//https://mockapi.io/projects/62dc08084438813a261000b0
 import { useState, useEffect } from 'react';
 
 function User() {

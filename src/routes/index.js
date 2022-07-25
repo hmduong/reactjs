@@ -1,7 +1,7 @@
 //pages
 import Home from '~/pages/Home';
 import News from '~/pages/News';
-import About from '~/pages/About';
+import About from '~/pages/Docs';
 
 //layouts
 import { HeaderOnly } from '~/components/Layout';

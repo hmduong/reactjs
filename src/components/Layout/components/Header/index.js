@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
-    <>
-      <h1>Header</h1>
-    </>
+    <div id="header">
+      <Link to="/News">News</Link>
+    </div>
   );
 }
 
