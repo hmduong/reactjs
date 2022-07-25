@@ -23,7 +23,7 @@ function User() {
       {user.items.map((u, index) => (
         <img key={index} src={u.image} alt={u.title} />
       ))}
-      <img src="https://drive.google.com/file/d/1x2_Zgiq9DSoEHShvCNms40NRZXGQ1fns/view?usp=sharing" alt="none" />
+      <img src="https://drive.google.com/uc?export=view&id=1x2_Zgiq9DSoEHShvCNms40NRZXGQ1fns" alt="none" />
     </>
   );
 }
