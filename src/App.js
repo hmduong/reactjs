@@ -1,40 +1,35 @@
-//libaries
-import { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from '~/routes';
-import { clsx } from 'clsx';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Post from './components/Post';
 import { DefaultLayout } from './components/Layout';
+import NoMatch from './components/NoMatch';
+import { publicRoutes } from './routes/publicRoutes';
 
-function App() {
+export default function App() {
+  function routesTree(root) {
+    return (
+      <>
+        {root.map((route, key) => {
+          const Element = route.element ? <route.element /> : route.url ? <Post url={route.url} /> : <></>;
+          return (
+            <Route key={key} path={route.path} element={Element}>
+              {route.children ? routesTree(route.children) : <></>}
+            </Route>
+          );
+        })}
+        <Route path="*" element={<NoMatch />} />
+      </>
+    );
+  }
+
   return (
-    <Router>
-      <div className={clsx('app')}>
+    <BrowserRouter>
+      <div className="app">
         <Routes>
-          {publicRoutes.map((route, index) => {
-            let Layout = DefaultLayout;
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-            const Page = route.page;
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  <Layout>
-                    <Page />
-                  </Layout>
-                }
-              />
-            );
-          })}
+          <Route path="/" element={<DefaultLayout />}>
+            {routesTree(publicRoutes)}
+          </Route>
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-export default App;

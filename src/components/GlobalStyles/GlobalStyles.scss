@@ -1,5 +1,54 @@
-@import 'normalize.css';
+//1280 1180 1100 980 780 600
 
-button {
-  background-color: aqua;
+html {
+  position: relative;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: Segoe UI, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  top: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  line-height: 1.15;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: 0;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.p-r-380 {
+  padding-right: 380px;
 }

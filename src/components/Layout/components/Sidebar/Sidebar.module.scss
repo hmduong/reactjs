@@ -1,0 +1,99 @@
+.content {
+  flex: 1;
+}
+
+.sidebar {
+  position: relative;
+  width: 300px;
+  margin-left: 80px;
+}
+
+.container {
+  height: calc(100vh - 110px);
+  position: fixed;
+  top: 110px;
+  bottom: 0;
+  padding-right: 999px;
+  overflow-y: scroll;
+  background-color: rgb(247, 247, 247);
+  border-left: 1px solid #ddd;
+}
+
+.nav {
+  margin: 70px 0 0 40px;
+  width: 218px;
+}
+
+//============================
+
+.section {
+  color: #6d6d6d;
+
+  h4 {
+    height: 40px;
+    width: max-content;
+    margin-top: 10px;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    overflow: visible;
+
+    &:hover {
+      color: #232323;
+    }
+
+    svg {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+  }
+
+  a {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #232323;
+  }
+}
+
+.heading-active {
+  color: #232323;
+
+  ul {
+    display: block;
+  }
+
+  svg {
+    transform: rotateX(180deg);
+  }
+}
+
+.css-ul {
+  display: none;
+
+  li {
+    position: relative;
+    height: 25px;
+    margin-top: 5px;
+    display: flex;
+    width: max-content;
+  }
+}
+
+.current-log {
+  span {
+    position: absolute;
+    left: -25px;
+    height: 100%;
+    width: 4px;
+    background-color: #61dafb;
+    z-index: 2;
+  }
+
+  a {
+    font-weight: 700;
+    color: #000;
+  }
+}

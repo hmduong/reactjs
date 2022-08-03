@@ -1,0 +1,150 @@
+$active-color: #61dafb;
+
+.header {
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: $active-color;
+  }
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slogan {
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  color: #fff;
+  background-color: hsl(222, 14%, 10%);
+
+  a {
+    margin-left: 0.5rem;
+    color: $active-color;
+  }
+
+  .inner {
+    justify-content: center;
+  }
+}
+
+.actions {
+  height: 60px;
+  width: 100%;
+  background-color: #20232a;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  height: 100%;
+  width: calc(100% / 6);
+  margin-right: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $active-color;
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+}
+
+.navigations {
+  height: 100%;
+  flex: 1;
+  display: flex;
+
+  a {
+    position: relative;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 1.125rem;
+    font-weight: 100;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    span {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $active-color;
+    }
+
+    .current p {
+      color: $active-color;
+    }
+  }
+}
+
+.search {
+  width: calc(100% / 5);
+  height: fit-content;
+  display: flex;
+  border-radius: 3px;
+  margin-right: 20px;
+
+  i {
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    margin-right: 5px;
+  }
+
+  input {
+    height: 30px;
+    flex: 1;
+    position: relative;
+    padding: 4px;
+    background: none;
+    font-size: 1.05rem;
+    font-weight: 100;
+    color: #fff;
+    vertical-align: top;
+  }
+
+  &:focus-within {
+    background-color: rgba(130, 130, 130, 0.3);
+  }
+}
+
+.contributer {
+  width: fit-content;
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    color: #fff;
+  }
+}
+
+.lang svg {
+  margin-right: 5px;
+}
+
+.buffer {
+  width: 100%;
+  height: 110px;
+}
