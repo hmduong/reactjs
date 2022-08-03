@@ -21,7 +21,7 @@ function Tutorial() {
       .then((res) => res.text())
       .then((text) => {
         setText(text);
-        tutorialCatalog[0].list = text.match(/#.+\{#[^\}]+/gim).map((e) => ({
+        tutorialCatalog[0].list = text.match(/#.+\{#.+\}/gim).map((e) => ({
           path: '#' + e.split('{#')[1].split('}')[0],
           internal: true,
           title: e.split('# ')[1].split(' {#')[0],

@@ -9,7 +9,6 @@ const cx = classNames.bind(styles);
 
 function convert(raw) {
   //console.log(raw.match(/\[[^\)#]+\)/gim));
-  console.log(raw.match(/#.+\{#[^\}]+/gim));
   return (
     '# ' + raw.split('---')[1].split('title: ')[1].split('permalink:')[0] + raw.split('---')[2] + raw.split('---')[3]
   );
