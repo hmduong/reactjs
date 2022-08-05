@@ -4,6 +4,7 @@ $active-color: #61dafb;
   width: 100%;
   top: 0;
   position: fixed;
+  z-index: 3;
 
   a {
     transition: color 0.3s;

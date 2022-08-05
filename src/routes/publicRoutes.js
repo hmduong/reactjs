@@ -35,6 +35,10 @@ const docsRoutes = [
     url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/docs/release-channels.md',
   },
   {
+    path: 'hooks-intro',
+    url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/docs/hooks-intro.md',
+  },
+  {
     path: 'hooks-overview',
     url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/docs/hooks-intro.md',
   },
@@ -203,6 +207,14 @@ const dailyBlog = [
   {
     path: '2020-02-26',
     url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/blog/2020-02-26-react-v16.13.0.md',
+  },
+  {
+    path: '2019-11-06',
+    url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/blog/2019-11-06-building-great-user-experiences-with-concurrent-mode-and-suspense.md',
+  },
+  {
+    path: '2019-10-22',
+    url: 'https://raw.githubusercontent.com/reactjs/reactjs.org/main/content/blog/2019-10-22-react-release-channels.md',
   },
 ];
 

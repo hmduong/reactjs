@@ -1,1 +1,1 @@
-export { ExternalIcon, LangIcon, AngleIcon } from './SvgIcon';
+export { ExternalIcon, LangIcon, AngleIcon, TmIcon, NextToIcon } from './SvgIcon';

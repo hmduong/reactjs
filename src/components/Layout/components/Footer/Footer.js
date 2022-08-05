@@ -2,39 +2,45 @@ import styles from './Footer.module.scss';
 import classNames from 'classnames/bind';
 import External from '~/components/External';
 import { Link } from 'react-router-dom';
-import TmIcon from '~/components/SvgIcon/SvgIcon';
+import { TmIcon } from '~/components/SvgIcon';
 
 const listConcept = [
   {
     heading: 'DOCS',
     list: [
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
+      { path: '/docs/getting-started', blank: false, title: 'Installation', to: 'docs' },
+      { path: '/docs/hooks-intro', blank: false, title: 'Hooks', to: 'docs' },
+      { path: '/docs/testing', blank: false, title: 'Testing', to: 'docs' },
+      { path: '/docs/how-to-contribute', blank: false, title: 'Contributing', to: 'docs' },
+      { path: '/docs/faq-ajax', blank: false, title: 'FAQ', to: 'docs' },
     ],
   },
   {
     heading: 'CHANNELS',
     list: [
       { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
-      { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
-      { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
+      { path: 'https://stackoverflow.com/questions/tagged/reactjs', blank: true, title: 'Stack Overflow' },
+      { path: 'https://discord.com/invite/reactiflux', blank: true, title: 'Reactiflux Chat' },
+      { path: 'https://dev.to/t/react', blank: true, title: 'DEV Community' },
+      { path: 'https://www.facebook.com/react', blank: true, title: 'Facebook' },
+      { path: 'https://twitter.com/reactjs', blank: true, title: 'Twitter' },
     ],
   },
   {
     heading: 'COMMUNITY',
     list: [
-      { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
-      { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
+      { path: 'https://github.com/facebook/react/blob/main/CODE_OF_CONDUCT.md', blank: true, title: 'Code of Conduct' },
+      { path: '/community/support', blank: false, title: 'Community Resources' },
     ],
   },
   {
     heading: 'MORE',
     list: [
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
-      { path: 'https://github.com/facebook/react/', blank: true, title: 'GitHub' },
-      { path: '/docs/chapter1', blank: false, title: 'chapter1' },
+      { path: '/tutorial', blank: false, title: 'Tutorial' },
+      { path: '/blog/daily/2022-06-15', blank: false, title: 'Blogs' },
+      { path: 'https://reactnative.dev/', blank: true, title: 'React Native' },
+      { path: 'https://opensource.fb.com/legal/privacy/', blank: true, title: 'Privacy' },
+      { path: 'https://opensource.fb.com/legal/terms/', blank: true, title: 'Terms' },
     ],
   },
 ];
@@ -61,7 +67,9 @@ export default function Footer() {
                       {link.blank ? (
                         <External to={link.path}>{link.title}</External>
                       ) : (
-                        <Link to={link.path}>{link.title}</Link>
+                        <Link onClick={() => sessionStorage.setItem('page', link.to || 'none')} to={link.path}>
+                          {link.title}
+                        </Link>
                       )}
                     </li>
                   ))}
